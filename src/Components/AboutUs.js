@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../Image/Rupali_Birajdar.pdf";
+import Resume from "../Image/My Resume.pdf";
 import MyImage from "../Image/MyImage.jpg";
 import "./index.css";
 

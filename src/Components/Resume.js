@@ -1,6 +1,7 @@
 import React from "react";
 import "https://kit.fontawesome.com/d6f2a9f07b.js";
 import certificate from "../Image/certificate-Rupali Birajdar.pdf";
+import certificate2 from "../Image/Intershipcertificate-Rupali Birajdar.JPG"
 import "./index.css";
 
 const Resume = () => {
@@ -78,6 +79,9 @@ const Resume = () => {
                Project.
                </li>
              </p>
+             <li>
+              <a href={certificate2} className="text-white text-2xl font-bold">Certificate</a>
+            </li>
           </div>
           
                 
