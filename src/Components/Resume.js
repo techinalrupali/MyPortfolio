@@ -74,10 +74,12 @@ const Resume = () => {
                <li>Inproving and Maintenance Forms.
                Additional Features with Customisation working with
                Logical Rules.</li> 
-               <li>Working with Decision Table and Chart.
-               Basic Project1- Online Restaurant Management System
+               <li>Working with Decision Table and Chart.</li>
+               <li>
+               And Project1- Online Restaurant Management System
                Project.
                </li>
+               
              </p>
              <li>
               <a href={certificate2} className="text-white text-2xl font-bold">Certificate</a>
