@@ -1,7 +1,8 @@
 import React from "react";
 import "https://kit.fontawesome.com/d6f2a9f07b.js";
 import certificate from "../Image/certificate-Rupali Birajdar.pdf";
-import certificate2 from "../Image/Intershipcertificate-Rupali Birajdar.JPG"
+import certificate2 from "../Image/Intershipcertificate-Rupali Birajdar.JPG";
+import certificate3 from "../Image/certificate felixits-Rupali Birajdar.pdf";
 import "./index.css";
 
 const Resume = () => {
@@ -101,8 +102,8 @@ const Resume = () => {
             <div className="border-l-4 border-blue-950 px-3">
 
           <div className="box relative p-10 border-4 border-blue-600 bg-blue-950 cursor-pointer text-white text-start mb-3 hover:shadow-2xl hover:border-2">
-              <h4><i class="fa-solid fa-calendar-days"></i> 2022-2023 (6 Months) </h4>
-              <h3>Full Stack Web Develoer</h3>
+              <h4><i class="fa-solid fa-calendar-days"></i> Aug-2022 </h4>
+              <h3>Full Stack Dot Net Develoer</h3>
               <h4>Think Quotient Software Pvt Ltd. Pune, India</h4>
               <p>
               <li>C#DotNet, SQL, HTML, CSS</li>
@@ -111,6 +112,18 @@ const Resume = () => {
               <a href={certificate} className="text-white text-2xl font-bold">Certificate</a>
               </li>
           </div>
+          <div className="box relative p-10 border-4 border-blue-600 bg-blue-950 cursor-pointer text-white text-start mb-3 hover:shadow-2xl hover:border-2">
+              <h4><i class="fa-solid fa-calendar-days"></i> Aug-2024</h4>
+              <h3>Full Stack Web Develoer</h3>
+              <h4>Felix-ITs Solutions Pune, India</h4>
+              <p>
+              <li>HTML, CSS, JAVASCRIPT, REACT, PYTHON, DJANGO</li>
+              </p>
+              <li>
+              <a href={certificate3} className="text-white text-2xl font-bold">Certificate</a>
+              </li>
+          </div>
+          
           
                 
               

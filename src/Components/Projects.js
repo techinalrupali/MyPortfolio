@@ -6,6 +6,9 @@ import Project3 from '../Image/Project3.png';
 import Project4 from '../Image/Project4.png';
 import Project5 from '../Image/Project5.png';
 import Project6 from '../Image/Project6.png';
+import Project7 from "../Image/Project7.png";
+import Project8 from "../Image/Project8.png";
+import Project9 from "../Image/Project9.png";
 import "./index.css";
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -18,7 +21,7 @@ const Projects = () => {
     img:Project1,
     name:"Online Farming Store Products",
     github_link:'https://github.com/techinalrupali/farming-products',
-    live_link:"https://onlinefarmingstore.netlify.app"
+    live_link:"https://onlinefarmingstore.netlify.app/"
     },
     {
       img:Project2,
@@ -50,6 +53,22 @@ const Projects = () => {
       github_link:'https://github.com/techinalrupali/password_generator',
       live_link:"https://mypasswordgenerate.netlify.app"
     },
+    {
+      img:Project7,
+      nese:"News Website",
+      github_link:"https://github.com/techinalrupali/NewsWebsiteusingReact",
+    },
+    {
+      img:Project8,
+      nese:"Food Recipes",
+      github_link:"https://github.com/techinalrupali/food-recipes",
+    },
+    {
+      img:Project9,
+      nese:"Image Upload Using Python",
+      github_link:"https://github.com/techinalrupali/Image-Upload",
+    }
+
   ]
 
   return (

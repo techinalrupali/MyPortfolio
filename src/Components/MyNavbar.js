@@ -39,7 +39,7 @@ const MyNavbar = () => {
           <ul className='flex items-center text-white gap-1 py-2 text-lg '>
            {
             menuLinks.map((menu,i)=>(
-              <li key={i} className='px-6'>
+              <li key={i} className='px-6 hover:scale-105 duration-200 cursor-pointer' >
               <a href={menu.link} className='no-underline text-blue-950  hover:text-white ' >{menu.name}</a>
             </li>
             ))
@@ -55,8 +55,8 @@ const MyNavbar = () => {
           <ul className='flex flex-col justify-center h-full gap-10 py-2 text-lg'>
               {
                 menuLinks.map((menu,i)=>(
-                  <li key={i} className='px-6 hover:to-blue-950'>
-                    <a href={menu.link} className='no-underline text-blue-950  hover:text-white '>{menu.name}</a>
+                  <li key={i} className='px-6 hover:scale-105 duration-200 cursor-pointer'>
+                    <a href={menu.link} className='no-underline text-blue-950  hover:text-white ' >{menu.name}</a>
                   </li>
                 ))
               }

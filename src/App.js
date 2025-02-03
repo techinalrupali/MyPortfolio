@@ -11,6 +11,7 @@ import Projects from './Components/Projects';
 import Footer from './Components/Footer';
 import Resume from './Components/Resume';
 import Hireme from './Components/Hireme';
+import {Toaster} from "react-hot-toast";
 function App() {
   return (
     <>
@@ -30,6 +31,7 @@ function App() {
     <Footer/>
    </Router>
   */}
+         <div>
          <MyNavbar/>
          <Bot/>
          <Home/>
@@ -40,6 +42,10 @@ function App() {
          <Projects/>
          <Contact/>
          <Footer/>
+         </div>
+        
+
+         <Toaster />
 
     </>
   );

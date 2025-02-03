@@ -1,5 +1,5 @@
 import React from "react";
-import Resume from "../Image/My Resume.pdf";
+import Resume from "../Image/Rupali_Birajdar_Resume.pdf";
 import MyImage from "../Image/MyImage.jpg";
 import "./index.css";
 
@@ -7,8 +7,8 @@ import "./index.css";
 const AboutUs = () => {
   const info=[
     {text:'Months Experience' , count:'06'},
-    {text:'Completed Projects' , count:'2'},
-    {text:'Certifications' , count:'1'},
+    {text:'Completed Projects' , count:'9'},
+    {text:'Certifications' , count:'2'},
 
   ]
   return (

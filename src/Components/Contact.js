@@ -1,30 +1,33 @@
 import React, { useRef } from 'react';
 import "./index.css";
-import emailjs from '@emailjs/browser';
+// import emailjs from '@emailjs/browser';
 import "https://kit.fontawesome.com/d6f2a9f07b.js"
+import { useForm } from "react-hook-form";
+import axios from 'axios';
+import {toast} from "react-hot-toast";
 
 
 
 const Contact = () => {
-  const form = useRef();
+ 
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+  const onSubmit =async (data) => {
+    const userinfo={
+      name:data.name,
+      number:data.number,
+      email:data.email,
+      message:data.message
 
-  const sendEmail = (e) => {
-    e.preventDefault();
-
-    emailjs
-      .sendForm('service_ki6ind9', 'template_4ji8zzu', form.current, {
-        publicKey: 'Jg_wEbYCW_3lS-fnW',
-      })
-      .then(
-        () => {
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          console.log('FAILED...', error.text);
-        },
-      );
-  };
-
+    }
+    try{
+      await axios.post("https://getform.io/f/arooklgb",userinfo);
+      toast.success("Your Message has been sent");
+    }
+    catch(error){
+      console.log(error);
+      toast.error("Something went wrong");
+    }
+  }
   
   return (
     <>
@@ -34,7 +37,7 @@ const Contact = () => {
           Contact
           <span className="text-cyan-800">Us</span>
         </h3>
-         <p>Thank You For Contact Me! Have a Nice Day </p>
+         <p> Please fill out the form below to contact me </p>
        </div>
        <div className='container'>
          <div className='contactInfo'>
@@ -69,31 +72,49 @@ const Contact = () => {
              </div>
          </div>
          <div className='contactForm'>
-           <form  ref={form} onSubmit={sendEmail}>
-             <h2>Send Message</h2>
+           <form onSubmit={handleSubmit(onSubmit)} 
+          //</div> action='' 
+           // method="POST"
+           >
+             <h2 className=' text-xl font-semibold mb-4 '>Send Your Message</h2>
               <div className='inputBox'>
-               <input type="text" name="from_name" required="required" />
-               <span>Full Name</span>
+                <label className=' block text-gray-700'>Full Name</label>
+               <input type="text" name="name" {...register("name", { required: true })}
+                className='shadow appearance-none border rounded py-2 px-3 text-grey-700 leading-tight focus:outline-none focus:shadow-outline'
+                placeholder='Enter Full Name'/>
+                {errors.name && <span>This field is required</span>}
+              
                </div>
                <div className='inputBox'>
-               <input type="text" name="from_number" required="required" />
-               <span>Mobile Number</span>
+               <label className=' block text-gray-700'>Mobile Number</label>
+               <input type="text" name="number" {...register("number", { required: true })}
+               className='shadow appearance-none border rounded py-2 px-3 text-grey-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Enter Mobile number'/>
+               {errors.number && <span>This field is required</span>}
+             
                </div>
                <div className='inputBox'>
-               <input type="email" name="from_email" required="required" />
-               <span>Email</span>
+               <label className=' block text-gray-700'>Email</label>
+               <input type="email" name="email" {...register("email", { required: true })} 
+               className='shadow appearance-none border rounded py-2 px-3 text-grey-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Enter Email'/>
+               {errors.email && <span>This field is required</span>}
+             
                </div>
                <div className='inputBox'>
-               <textarea name="message" required="required" />
-               <span>Message</span>
+               <label className=' block text-gray-700'>Message</label>
+               <textarea name="message" {...register("message", { required: true })} 
+               className='shadow appearance-none border rounded py-2 px-3 text-grey-700 leading-tight focus:outline-none focus:shadow-outline' placeholder='Enter Message'/>
+               {errors.message && <span>This field is required</span> }
+              
                </div>
                <div className='inputBox'>
-               <input type="submit" name="" value="Send" />
+               <input type="submit" name="" value="Send" className='rounded-xl px-3 py-2'/>
                
                </div>
                
            </form>
          </div>
+        
+
 
        </div>
     </section>
